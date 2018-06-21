@@ -1,9 +1,15 @@
 <?php
 
+namespace MediaWiki\Extension\MW_EXT_Color;
+
+use OutputPage;
+use Parser;
+use PPFrame;
+use Skin;
+
 /**
  * Class MW_EXT_Color
  * ------------------------------------------------------------------------------------------------------------------ */
-
 class MW_EXT_Color {
 
 	/**
@@ -26,7 +32,7 @@ class MW_EXT_Color {
 	 * @param Parser $parser
 	 *
 	 * @return bool
-	 * @throws MWException
+	 * @throws \MWException
 	 * -------------------------------------------------------------------------------------------------------------- */
 
 	public static function onParserFirstCallInit( Parser $parser ) {
@@ -74,7 +80,7 @@ class MW_EXT_Color {
 	 * -------------------------------------------------------------------------------------------------------------- */
 
 	public static function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
-		$out->addModuleStyles( array( 'ext.mw.color.styles' ) );
+		$out->addModuleStyles( [ 'ext.mw.color.styles' ] );
 
 		return true;
 	}

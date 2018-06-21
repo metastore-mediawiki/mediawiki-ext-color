@@ -14,14 +14,14 @@
 		"MediaWiki": ">= 1.30.0"
 	},
 	"AutoloadClasses": {
-		"MW_EXT_Color": "MW_EXT_Color.class.php"
+		"MediaWiki\\Extension\\MW_EXT_Color\\MW_EXT_Color": "MW_EXT_Color.class.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
-			"MW_EXT_Color::onParserFirstCallInit"
+			"MediaWiki\\Extension\\MW_EXT_Color\\MW_EXT_Color::onParserFirstCallInit"
 		],
 		"BeforePageDisplay": [
-			"MW_EXT_Color::onBeforePageDisplay"
+			"MediaWiki\\Extension\\MW_EXT_Color\\MW_EXT_Color::onBeforePageDisplay"
 		]
 	},
 	"MessagesDirs": {
