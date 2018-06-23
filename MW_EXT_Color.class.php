@@ -3,25 +3,12 @@
 namespace MediaWiki\Extension\MW_EXT_Color;
 
 use OutputPage, Parser, PPFrame, Skin;
+use MediaWiki\Extension\MW_EXT_Core\MW_EXT_Core;
 
 /**
  * Class MW_EXT_Color
  * ------------------------------------------------------------------------------------------------------------------ */
 class MW_EXT_Color {
-
-	/**
-	 * Clear DATA (escape html).
-	 *
-	 * @param $string
-	 *
-	 * @return string
-	 * -------------------------------------------------------------------------------------------------------------- */
-
-	private static function clearData( $string ) {
-		$outString = htmlspecialchars( trim( $string ), ENT_QUOTES );
-
-		return $outString;
-	}
 
 	/**
 	 * Register tag function.
@@ -51,7 +38,7 @@ class MW_EXT_Color {
 
 	public static function onRenderTag( $input, $args = [], Parser $parser, PPFrame $frame ) {
 		// Argument: type.
-		$getType = self::clearData( $args['type'] ?? '' ?: '' );
+		$getType = MW_EXT_Core::outClear( $args['type'] ?? '' ?: '' );
 		$outType = empty( $getType ) ? '' : ' style="color:' . $getType . ';"';
 
 		// Get content.
