@@ -20,7 +20,7 @@ class MW_EXT_Color {
 	 * -------------------------------------------------------------------------------------------------------------- */
 
 	public static function onParserFirstCallInit( Parser $parser ) {
-		$parser->setHook( 'color', __CLASS__ . '::onRenderTag' );
+		$parser->setHook( 'color', [ __CLASS__, 'onRenderTag' ] );
 
 		return true;
 	}
