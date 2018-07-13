@@ -7,7 +7,7 @@ use MediaWiki\Extension\MW_EXT_Core\MW_EXT_Core;
 
 /**
  * Class MW_EXT_Color
- * ------------------------------------------------------------------------------------------------------------------ */
+ */
 class MW_EXT_Color {
 
 	/**
@@ -17,8 +17,7 @@ class MW_EXT_Color {
 	 *
 	 * @return bool
 	 * @throws \MWException
-	 * -------------------------------------------------------------------------------------------------------------- */
-
+	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setHook( 'color', [ __CLASS__, 'onRenderTag' ] );
 
@@ -34,8 +33,7 @@ class MW_EXT_Color {
 	 * @param PPFrame $frame
 	 *
 	 * @return string
-	 * -------------------------------------------------------------------------------------------------------------- */
-
+	 */
 	public static function onRenderTag( $input, $args = [], Parser $parser, PPFrame $frame ) {
 		// Argument: type.
 		$getType = MW_EXT_Core::outClear( $args['type'] ?? '' ?: '' );
@@ -61,8 +59,7 @@ class MW_EXT_Color {
 	 * @param Skin $skin
 	 *
 	 * @return bool
-	 * -------------------------------------------------------------------------------------------------------------- */
-
+	 */
 	public static function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
 		$out->addModuleStyles( [ 'ext.mw.color.styles' ] );
 
