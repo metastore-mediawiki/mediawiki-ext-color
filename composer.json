@@ -25,14 +25,15 @@
 	},
 	"require": {
 		"php": ">=7.2",
-		"composer/installers": "~1.0"
+		"composer/installers": "~1.0",
+		"metastore-mediawiki/mediawiki-ext-core": "*"
 	},
 	"autoload": {
 		"classmap": [
-			"MW_EXT_Key.class.php"
+			"MW_EXT_Color.class.php"
 		]
 	},
 	"extra": {
-		"installer-name": "MW_EXT_Key"
+		"installer-name": "MW_EXT_Color"
 	}
 }
