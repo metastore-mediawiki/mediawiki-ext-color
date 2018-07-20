@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\MW_EXT_Color;
 
 use OutputPage, Parser, PPFrame, Skin;
-use MediaWiki\Extension\MW_EXT_Core\MW_EXT_Core;
+use MediaWiki\Extension\MW_EXT_Kernel\MW_EXT_Kernel;
 
 /**
  * Class MW_EXT_Color
@@ -36,7 +36,7 @@ class MW_EXT_Color {
 	 */
 	public static function onRenderTag( $input, $args = [], Parser $parser, PPFrame $frame ) {
 		// Argument: type.
-		$getType = MW_EXT_Core::outClear( $args['type'] ?? '' ?: '' );
+		$getType = MW_EXT_Kernel::outClear( $args['type'] ?? '' ?: '' );
 		$outType = empty( $getType ) ? '' : ' style="color:' . $getType . ';"';
 
 		// Get content.
