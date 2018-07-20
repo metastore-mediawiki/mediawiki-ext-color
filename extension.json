@@ -17,14 +17,14 @@
 		}
 	},
 	"AutoloadClasses": {
-		"MediaWiki\\Extension\\MW_EXT_Color\\MW_EXT_Color": "MW_EXT_Color.class.php"
+		"MediaWiki\\Extension\\METADATA\\MW_EXT_Color": "MW_EXT_Color.class.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
-			"MediaWiki\\Extension\\MW_EXT_Color\\MW_EXT_Color::onParserFirstCallInit"
+			"MediaWiki\\Extension\\METADATA\\MW_EXT_Color::onParserFirstCallInit"
 		],
 		"BeforePageDisplay": [
-			"MediaWiki\\Extension\\MW_EXT_Color\\MW_EXT_Color::onBeforePageDisplay"
+			"MediaWiki\\Extension\\METADATA\\MW_EXT_Color::onBeforePageDisplay"
 		]
 	},
 	"MessagesDirs": {
